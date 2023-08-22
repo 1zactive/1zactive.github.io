@@ -1,26 +1,27 @@
 <html>
 
   <head>
+    <title>1Z Active</title>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <style>
       body {
-        min-width: 100vw;
-        min-height: 100vh;
+        min-width: 100%;
+        min-height: 100%;
         margin: 0px;
         display: flex;
         flex-direction: column;
 
         font-family: 'Lato';
+        overflow: hidden;
       }
       
       .header {
-        min-height: 50px;
-        background: grey;
-      }
+        min-height: 60px;
+        height: 60px;
+        background: rgb(60, 60, 60);
 
-      #logo-img {
-        width: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       .logo {
@@ -28,20 +29,35 @@
         height: 60px;
       }
 
-      .content {
-        flex: 1;
-        background: black;
+      .logo:hover {
+        background-color: rgba(255, 255, 255, 0.662);
       }
-      
+
+      #logo-img {
+        width: 100%;
+        height: 100%;
+      }
+
       .footer {
         min-height: 65px;
-        background: grey;
         text-align: center;
 
         font-weight: bold;
-        color: black;
+        background: rgb(60, 60, 60);
       }
 
+      #jumpsuit-podium {
+        height: 300px;
+      }
+
+      .content {
+        flex: 1;
+        background-image: url("images/20220813_Catalina_Sunset_16_9.JPG");
+        background-color: black;
+        background-size: cover;
+        background-position: center center;
+      }
+      
       a {
         color: rgb(39, 39, 39);
         text-decoration: none;
@@ -52,7 +68,8 @@
       }
 
       .button {
-        width: 180px;
+        min-width: 140px;
+        width: 5%;
         height: 25px;
         line-height: 25px;
 
@@ -65,26 +82,77 @@
         margin: auto;
         margin-top: 30px;
       }
+
+      .product-card {
+        color: white;
+        width: 80%;
+        display: grid;
+
+        background-color: rgba(0,0,0,0.77);
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px;
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+      }
+
+      .grid-description {
+        grid-column-start: 2;
+      }
     </style>
   </head>
 
   <body style="background-color: black;">
     <div class="header">
-      <div class="logo">
-        <img id="logo-img" src="./images/1z.png" alt="1Z">
-      </div>
+      <a href="https://wear1z.com/">
+        <div class="logo">
+          <img id="logo-img" src="./images/1z.png" alt="1Z">
+        </div>
+      </a>
     </div>
     
     <div class="content">
+      <div class="product-card">
+        <div class="grid-image">
+          <div>
+            <img id="jumpsuit-podium" src="./images/jumpsuit-podium.jpg" alt="1Z">
+          </div>
+          <b>Pro Playsuit -- play hard, look pretty</b>
+        </div>
+        <div class="grid-bullets">
+          <ul>
+            <li>One piece for peace of mind</li>
+            <li>Stays put while you get after it</li>
+            <li>Full coverage for comfort in crazy positions</li>
+            <li>Convenient relief in uncomfortable scenarios</li>
+            <li>Figure flattering & fun to wear</li>
+            <li>Moisture wicking and optional vented panels</li>
+            <li>quick dry + antimicrobial, eco - friendly fabric</li>
+
+          </ul>
+        </div>
+        <div class="grid-description">
+          
+          The playsuit is designed to be a solution for active women looking for a full coverage and applicable garment.<br>
+          This playsuit was designed to solve normal inhibitions and arm the host with the confidence to go for it and
+          get out there. Climbing, surfing, sailing, effective for all extreme sports, this suit makes you feel awesome
+          and protects all the parts from sun, scratches, peeking and prohibitive scenarios. It's comfortable,
+          breathable, eco-friendly, and antimicrobial to keep the lady parts calm and cool, while the rest of your bod
+          does it's thing. Easy access for restroom breaks with incredible flexible material so you don't have to remove
+          the whole top. We encourage you to push the limits and show us how you wear your suit in the wild.<br>
+          Playsuit -- durable, flexible, all inclusive. A suit that plays hard and gives back.
+        </div>
+      </div>
       <a href="mailto:wear1zactive@gmail.com">
-        <div class="button">Pre-Order Now</div>
+        <div class="button">Order Now</div>
       </a>
       
     </div>
     
     <div class="footer">
       <div>1Z Active Wear</div>
-      <div>San Pedro, California</div>
+      <div>Made in Los Angeles</div>
       <div><a href="mailto:wear1zactive@gmail.com">wear1zactive@gmail.com</a></div>
       <div></div>
     </div>
