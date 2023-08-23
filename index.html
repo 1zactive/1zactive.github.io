@@ -1,78 +1,95 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1Z Active</title>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <style>
       body {
-        min-width: 100%;
-        min-height: 100%;
+        width: 100vw;
+        height: 100vh;
         margin: 0px;
-        display: flex;
-        flex-direction: column;
-
+        color: rgb(164, 164, 164);
         font-family: 'Lato';
         overflow: hidden;
       }
-      
-      .header {
-        max-height: 4%;
-        height: 100%;
-        background: rgb(60, 60, 60);
-
-        display: flex;
-        justify-content: center;
-      }
-
-      .logo {
-        height: 100%;
-      }
-
-      .logo:hover {
-        background-color: rgba(255, 255, 255, 0.662);
-      }
-
-      #logo-img {
-        height: 100%;
-      }
-
-      .footer {
-        max-height: 6%;
-        height: 100%;
-        text-align: center;
-
-        font-size: 1.5vh;
-        font-weight: bold;
-        background: rgb(60, 60, 60);
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      #jumpsuit-podium {
-        height: 300px;
-      }
 
       .content {
-        max-height: 90%;
-        flex: 1;
-        background-image: url("images/20220813_Catalina_Sunset_16_9.JPG");
-        background-color: black;
-        background-size: cover;
-        background-position: center center;
+        width: 100vw;
+        height: 100vh;
+        max-width: 1200px;
 
-        font-size: 1.8vh;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+        margin: auto;
+
         overflow-y: auto;
       }
-      
-      a {
-        color: rgb(39, 39, 39);
-        text-decoration: none;
+
+      .content > div {
+        padding: 10px;
       }
 
-      a:hover {
-        color:rgb(67, 67, 67)
+      #logo-transparent {
+        width: 100%;
+        filter: invert(100%);
+      }
+
+      #logo-container {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 15px;
+      }
+
+      #sketch {
+        height: 100%;
+      }
+
+      #sketch-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;;
+      }
+
+      .grid-commitment {
+        grid-row: span 2;
+        margin: auto 0px;
+      }
+
+      .grid-jumpsuit {
+        grid-row: span 2;
+      }
+
+      #shopify-button {
+        display: flex;
+        justify-content: center;
+      }
+
+      .grid-description {
+        grid-row: span 2;
+      }
+
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        scroll-margin-top: 10px;
+        scroll-margin-bottom: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #242424;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        background-clip: context-box;
       }
 
       .button {
@@ -92,108 +109,336 @@
         margin-bottom: 30px;
       }
 
-      .product-card {
-        color: white;
-        width: 80%;
-        
-        background-color: rgba(0,0,0,0.77);
-        border-radius: 10px;
-        margin: 20px auto;
-        padding: 20px;
-        
-        display: grid;
-        grid-template-columns: 30%;
-        grid-template-rows: auto;
-        grid-row-gap: 10px;
-        grid-column-gap: 10px;
-      }
+      @media only screen and (max-width: 800px) {
+        .content {
+          grid-auto-flow: row;
+          grid-template-columns: 100%;
+          grid-template-rows: auto;
+        }
 
-      .grid-title {
-        grid-column: span 2;
-      }
-
-      .grid-image {
-        grid-row: span 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .grid-description {
-        grid-column-start: 2;
-      }
-
-      /* Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-        scroll-margin-top: 10px;
-        scroll-margin-bottom: 10px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background-color: #242424;
-        border-radius: 8px;
-        border: 2px solid transparent;
-        background-clip: context-box;
+        #logo-container {
+          max-width: 50%;
+        }
       }
     </style>
   </head>
 
   <body style="background-color: black;">
-    <div class="header">
-      <a href="https://wear1z.com/">
-        <div class="logo">
-          <img id="logo-img" src="./images/1z.png" alt="1Z">
-        </div>
-      </a>
-    </div>
-    
     <div class="content">
-      <div class="product-card">
-        <div class="grid-title">Women's Pro Playsuit</div>
-        <div class="grid-image">
-          <div>
-            <img id="jumpsuit-podium" src="./images/jumpsuit-podium.jpg" alt="1Z">
-          </div>
-        </div>
-        <div class="grid-bullets">
-          <ul>
-            <li>One piece for peace of mind</li>
-            <li>Stays put while you get after it</li>
-            <li>Full coverage for comfort in crazy positions</li>
-            <li>Convenient relief in uncomfortable scenarios</li>
-            <li>Figure flattering & fun to wear</li>
-            <li>Moisture wicking and optional vented panels</li>
-            <li>quick dry + antimicrobial, eco - friendly fabric</li>
-
-          </ul>
-        </div>
-        <div class="grid-description">
-          
-          The playsuit is designed to be a solution for active women looking for a full coverage and applicable garment.<br>
-          This playsuit was designed to solve normal inhibitions and arm the host with the confidence to go for it and
-          get out there. Climbing, surfing, sailing, effective for all extreme sports, this suit makes you feel awesome
-          and protects all the parts from sun, scratches, peeking and prohibitive scenarios. It's comfortable,
-          breathable, eco-friendly, and antimicrobial to keep the lady parts calm and cool, while the rest of your bod
-          does it's thing. Easy access for restroom breaks with incredible flexible material so you don't have to remove
-          the whole top. We encourage you to push the limits and show us how you wear your suit in the wild.<br>
-          Playsuit -- durable, flexible, all inclusive. A suit that plays hard and gives back.
+      <div class="grid-logo">
+        <div id="logo-container">
+          <img id="logo-transparent" src="./images/1z-logo-transparent.png">
         </div>
       </div>
-      <a href="mailto:wear1zactive@gmail.com">
-        <div class="button">Order Now</div>
-      </a>
       
-    </div>
-    
-    <div class="footer">
-      <div>1Z Active Wear</div>
-      <div>Made in Los Angeles</div>
-      <div><a href="mailto:wear1zactive@gmail.com">wear1zactive@gmail.com</a></div>
+      <div class="grid-commitment">
+        <div id="commitment-container">
+          <ul>
+            <li>Made in Los Angeles</li>
+            <li>All pieces customizable</li>
+            <li>Team Discounts and Athlete Support Systems</li>
+            <li>Percentage of sales donated to Ocean Rehabilitation Efforts</li>
+            <li>Guarantee free of manufacters defects</li>
+          </ul>
+
+          Inspired by wind, waves, and women who rip. Activewear that moves with the modern tech that we want, with an
+          old school retro confidence. Woman owned & operated, water-wise and body positive. Ocean conscious activewear
+          gives back with every purchase.
+        </div>
+      </div>
+
+      <div class="grid-jumpsuit">
+        <div id="sketch-container">
+          <img id="sketch" src="./images/jumpsuit-sketch-transparent.png">
+        </div>
+      </div>
+      <div class="grid-buy">
+        <div id="shopify-button">
+          <div id='product-component-1692772307465'>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                  ShopifyBuyInit();
+                } else {
+                  loadScript();
+                }
+              } else {
+                loadScript();
+              }
+              function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: '46e19c.myshopify.com',
+                  storefrontAccessToken: '31413465dca37737ff5574d82fa71c93',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('product', {
+                    id: '8584032354592',
+                    node: document.getElementById('product-component-1692772307465'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Lato, sans-serif",
+                    ":hover": {
+                      "background-color": "#4e76a4"
+                    },
+                    "background-color": "#5783b6",
+                    ":focus": {
+                      "background-color": "#4e76a4"
+                    },
+                    "border-radius": "20px",
+                    "padding-left": "35px",
+                    "padding-right": "35px"
+                  }
+                },
+                "buttonDestination": "checkout",
+                "contents": {
+                  "img": false,
+                  "title": false,
+                  "price": false
+                },
+                "text": {
+                  "button": "Buy now"
+                },
+                "googleFonts": [
+                  "Lato"
+                ]
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Lato, sans-serif",
+                    ":hover": {
+                      "background-color": "#4e76a4"
+                    },
+                    "background-color": "#5783b6",
+                    ":focus": {
+                      "background-color": "#4e76a4"
+                    },
+                    "border-radius": "20px",
+                    "padding-left": "35px",
+                    "padding-right": "35px"
+                  }
+                },
+                "googleFonts": [
+                  "Lato"
+                ],
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {
+                "styles": {
+                  "label": {
+                    "font-family": "Lato, sans-serif"
+                  },
+                  "select": {
+                    "font-family": "Lato, sans-serif"
+                  }
+                },
+                "googleFonts": [
+                  "Lato"
+                ]
+              },
+              "cart": {
+                "styles": {
+                  "button": {
+                    "font-family": "Lato, sans-serif",
+                    ":hover": {
+                      "background-color": "#4e76a4"
+                    },
+                    "background-color": "#5783b6",
+                    ":focus": {
+                      "background-color": "#4e76a4"
+                    },
+                    "border-radius": "20px"
+                  },
+                  "title": {
+                    "color": "#e5e5e5"
+                  },
+                  "header": {
+                    "color": "#e5e5e5"
+                  },
+                  "lineItems": {
+                    "color": "#e5e5e5"
+                  },
+                  "subtotalText": {
+                    "color": "#e5e5e5"
+                  },
+                  "subtotal": {
+                    "color": "#e5e5e5"
+                  },
+                  "notice": {
+                    "color": "#e5e5e5"
+                  },
+                  "currency": {
+                    "color": "#e5e5e5"
+                  },
+                  "close": {
+                    "color": "#e5e5e5",
+                    ":hover": {
+                      "color": "#e5e5e5"
+                    }
+                  },
+                  "empty": {
+                    "color": "#e5e5e5"
+                  },
+                  "noteDescription": {
+                    "color": "#e5e5e5"
+                  },
+                  "discountText": {
+                    "color": "#e5e5e5"
+                  },
+                  "discountIcon": {
+                    "fill": "#e5e5e5"
+                  },
+                  "discountAmount": {
+                    "color": "#e5e5e5"
+                  },
+                  "cart": {
+                    "background-color": "#414141"
+                  },
+                  "footer": {
+                    "background-color": "#414141"
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "popup": false,
+                "googleFonts": [
+                  "Lato"
+                ]
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "font-family": "Lato, sans-serif",
+                    "background-color": "#5783b6",
+                    ":hover": {
+                      "background-color": "#4e76a4"
+                    },
+                    ":focus": {
+                      "background-color": "#4e76a4"
+                    }
+                  }
+                },
+                "googleFonts": [
+                  "Lato"
+                ]
+              },
+              "lineItem": {
+                "styles": {
+                  "variantTitle": {
+                    "color": "#e5e5e5"
+                  },
+                  "title": {
+                    "color": "#e5e5e5"
+                  },
+                  "price": {
+                    "color": "#e5e5e5"
+                  },
+                  "fullPrice": {
+                    "color": "#e5e5e5"
+                  },
+                  "discount": {
+                    "color": "#e5e5e5"
+                  },
+                  "discountIcon": {
+                    "fill": "#e5e5e5"
+                  },
+                  "quantity": {
+                    "color": "#e5e5e5"
+                  },
+                  "quantityIncrement": {
+                    "color": "#e5e5e5",
+                    "border-color": "#e5e5e5"
+                  },
+                  "quantityDecrement": {
+                    "color": "#e5e5e5",
+                    "border-color": "#e5e5e5"
+                  },
+                  "quantityInput": {
+                    "color": "#e5e5e5",
+                    "border-color": "#e5e5e5"
+                  }
+                }
+              }
+            },
+                  });
+                });
+              }
+            })();
+            /*]]>*/
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-bullets">
+        <b>Pro Playsuit</b><br>
+        <i>Play hard, Sail Faasst!</i> 
+        <ul>
+          <li>Stays put while you get after it</li>
+          <li>Full coverage for comfort in crazy positions</li>
+          <li>Figure flattering compression & fun to wear</li>
+          <li>Moisture wicking and optional vented panels</li>
+          <li>Quick dry + antimicrobial, eco-friendly fabric</li>
+        </ul>
+      </div>
+      <div class="grid-description">
+        The playsuit is designed to be a solution for active women looking for a full coverage and agile garment. This
+        playsuit was designed to solve normal inhibitions and initiate the confidence to go for it and get out there.
+        From climbing, to surfing, sailing, kayaking, this gear is effective for all extreme & water sports.
+        <br><br>
+        It's comfortable, breathable, eco-friendly, and antimicrobial to keep your lady parts calm and cool, while the
+        rest of your bod does it's thing. Bring on the sun, sweat, rogue waves, griptape & gravel, this suit is armor
+        for your adventure lifestyle. Pro Playsuit makes you feel awesome while it protects from sun and scratches.
+        <br><br>
+        We encourage you to push the limits and wear your suit in the wild. This is gear that moves with you -- durable,
+        flexible, and all inclusive. A suit that plays hard and gives back.
+      </div>
     </div>
   </body>
 
